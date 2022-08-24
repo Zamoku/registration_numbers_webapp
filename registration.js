@@ -6,7 +6,6 @@ module.exports = function registration(db){
 
         async function displayReg(){
             let results = await db.manyOrNone('SELECT registration_num FROM Registration');
-            console.log(results)
             
             return results
         }
