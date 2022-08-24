@@ -55,8 +55,7 @@ body {
 	color: crimson;
 }
 
-.regNumber {
-
+li {
 	background-color: yellow;
 	border: 0.1em solid;
 	border-radius: 0.25em;
@@ -66,7 +65,7 @@ body {
 	text-align: center;
 	font-weight: bold;
 	float: left;
-
+	list-style: none;
 }
 
 .gp {
@@ -81,4 +80,5 @@ body {
 input[type='radio'] {
 	margin: 1em;
 }
+
 
