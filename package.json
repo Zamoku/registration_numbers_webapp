@@ -24,5 +24,13 @@
     "pg-promise": "^10.11.1"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zamoku/registration_numbers_webapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zamoku/registration_numbers_webapp/issues"
+  },
+  "homepage": "https://github.com/Zamoku/registration_numbers_webapp#readme",
   "description": ""
 }

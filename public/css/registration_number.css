@@ -15,10 +15,11 @@ body {
     padding: 0.40em;
     border-radius : 0.5em;
     border : 1px solid #ddd;
-    height: auto;
+    height:400px;
+	width: 600px;
     margin-bottom: 1em;
     margin-top: 20px;
-    background-color: #EFC050;
+    background-color: #6f6972;
   }
 
 .parts {
