@@ -37,8 +37,12 @@
 				<!-- <i>Reg numbers to be added here...</i> -->
 
 				<div class="regNumber">
-					{{reg_number}}
-					CY 124-245
+					
+					{{#each reg_number}}
+					<li>{{registration_num}}</li>
+
+					{{/each}}
+					{{!-- CY 124-245 --}}
 				</div>
 			</div>
 			</form>

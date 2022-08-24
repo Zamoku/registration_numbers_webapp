@@ -8,7 +8,7 @@ module.exports = function registration(db){
             let results = await db.manyOrNone('SELECT registration_num FROM Registration');
             console.log(results)
             
-            return results.registration_num
+            return results
         }
     return{
         addReg,

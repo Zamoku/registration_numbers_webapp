@@ -17,7 +17,7 @@ if (process.env.DATABASE_URL && !local) {
 }
 
 // which db connection to use
-const connectionString = process.env.DATABASE_URL || 'postgresql://zamoe:zamo123@localhost:5432/registration_db';
+ const connectionString = process.env.DATABASE_URL || 'postgresql://zamoe:zamo123@localhost:5432/registration_db';
 
 const db = pgp({
     connectionString,
