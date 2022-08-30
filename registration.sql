@@ -11,8 +11,7 @@ CREATE TABLE IF NOT EXISTS Registration(
    FOREIGN KEY(town_id) REFERENCES Towns(id)
 );
 
--- INSERT INTO Towns(town_name) VALUES ('CY'),('CA'),('CJ');
-INSERT INTO Towns(town_name) VALUES ('CL');
+INSERT INTO Towns(town_name) VALUES ('CY'),('CA'),('CJ');
 
 
 
