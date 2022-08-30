@@ -49,10 +49,16 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
 
-app.post('/registr', registrationRoutes.addRegNum)
-app.get('/', registrationRoutes.showReg)
+app.post('/registr', registrationRoutes.addRegNum);
+app.get('/show', registrationRoutes.showReg);
+app.get('/', registrationRoutes.showReg);
+// app.get('/reg_number/:reg_number', registrationRoutes.showReg);
+app.get('/reset', registrationRoutes.deleteAll);
+app.post('/filter', registrationRoutes.filterReg);
 
-const PORT = process.env.PORT || 3033
+
+
+const PORT = process.env.PORT || 3034
 
 app.listen(PORT, function () {
     console.log('App started at port:', PORT)

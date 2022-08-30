@@ -10,44 +10,69 @@
 </head>
 
 <body>
+
 	<div class="container">
 		<div>
+			{{!-- <img src="/public/css/Reg_webapp.png" alt="" srcset=""> --}}
 			<h1>Registration numbers</h1>
 
-			<div class="message">
-
+			<div>
+			{{#if messages.info}}
+                        <div class="entry">
+                            <p class="message" id="infoMessage"> {{messages.info}}</p>
+                          
+                        </div>
+                         <script type="text/javascript">window.setTimeout("document.getElementById('infoMessage').style.display='none';", 2000); </script>
+             {{/if}}
 			</div>
-
-
 			<form action="/registr" method="POST">
-				<input type="text" name="setReg" class="regNumberEntered" placeholder="enter a registration number" >
+				<input type="text" name="setReg" class="regNumberEntered" placeholder="enter a registration number">
 				<button class="addRegNumber btn blue" type="submit">Add reg number</button>
+			</form>
 
-			<div class="filter">
-				<strong>Filter by town</strong>
+				<div class="message">
 
-				<input type="radio" name="town" value="">Show all
-				<input type="radio" name="town" value="CY">Bellville
-				<input type="radio" name="town" value="CJ">Paarl
-				<input type="radio" name="town" value="CA"> Cape Town
+				{{#if messages.success}}
+				<div class="entry">
+					<p class="success_message" id="successMessage"> {{messages.success}}</p>
 
-			</div>
-			<hr>
-			<div class="regNumbers" >
-				<!-- <i>Reg numbers to be added here...</i> -->
-
-				<div class="regNumber">
-					
-					{{#each reg_number}}
-					<li>{{registration_num}}</li>
-
-					{{/each}}
-					{{!-- CY 124-245 --}}
 				</div>
+				<script
+					type="text/javascript">window.setTimeout("document.getElementById('successMessage').style.display='none';", 3000); </script>
+				{{/if}}
 			</div>
+
+			<form action="/filter" method="POST">
+				<div class=""></a>
+					<strong>Filter by town</strong>
+					<input type="radio" name="town" value="">Show all
+					<input type="radio" name="town" value="CY">Bellville
+					<input type="radio" name="town" value="CJ">Paarl
+					<input type="radio" name="town" value="CA"> Cape Town
+
+					<button class="filter btn" type="submit">Filter</button>
 			</form>
 		</div>
+		<hr>
+		<div class="regNumbers">
+			<!-- <i>Reg numbers to be added here...</i> -->
+
+			<div class="regNumber">
+
+				{{#each reg_number}}
+				<li>{{registration_num}}</li>
+
+				{{/each}}
+				{{!-- CY 124-245 --}}
+
+			</div>
+		</div>
 	</div>
+
+		<div class="reset btn"><a href="/reset" name="reset">Reset</a></div>
+	
+				
+	{{!-- </div> --}}
 </body>
 
 </html>
