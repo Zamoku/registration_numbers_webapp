@@ -46,7 +46,7 @@ body {
 }
 
 .blue {
-	background-color: rgb(30, 146, 255);
+	background-color: rgb(114, 162, 207);
 	border-radius: 0.65em;
 }
 
@@ -87,16 +87,17 @@ input[type='radio'] {
 	font-weight: bold;
   }
 .filter{
-	background-color:rgb(30, 146, 255);
+	background-color:rgb(114, 162, 207);
 	border-radius: 10px;
 	padding: 10px;
   }
 .reset{
-	background-color:rgb(255, 136, 0);
+	background-color:rgb(235, 156, 9);
 	border-radius: 10px;
 	width: 40px;
 	margin-top: 260px;
 	margin-left: 490px;
+	border: 2px solid  rgb(128, 75, 27);
   }
   a{
 	  color: black;
