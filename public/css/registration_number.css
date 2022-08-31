@@ -86,7 +86,7 @@ input[type='radio'] {
 .success_message{
 	color:crimson ;
 	font-weight: bold;
-	font-size: larger;
+	font-size: large;
   }
 .filter{
 	background-color:rgb(114, 162, 207);
