@@ -54,6 +54,7 @@ body {
 	height: 1em;
 	font-weight: bold;
 	color: crimson;
+	font-size:larger;
 }
 
 li {
@@ -83,8 +84,9 @@ input[type='radio'] {
 	margin: 1em;
 }
 .success_message{
-	color:brown ;
+	color:crimson ;
 	font-weight: bold;
+	font-size: larger;
   }
 .filter{
 	background-color:rgb(114, 162, 207);
