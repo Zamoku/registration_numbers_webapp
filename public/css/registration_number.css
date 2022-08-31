@@ -16,11 +16,11 @@ body {
     border-radius : 0.5em;
     border : 1px solid #ddd;
     height:600px;
-	width: 700px;
+	width: 650px;
     margin-bottom: 1em;
     margin-top: 20px;
-    /* background-color: #6f6972; */ 
-	 background-image: url('/css/reg-bgimage.png'); 
+	padding-right: 10px;
+	background-image: url('/css/reg-bgimage.png'); 
   }
 
 .parts {
@@ -33,7 +33,6 @@ body {
 }
 
 .regNumberEntered {
-	/* margin: 1em; */
 	padding: 1em;
 	border-radius: 0.5em;
 	font-size: 1em;
@@ -47,7 +46,8 @@ body {
 }
 
 .blue {
-	background-color: rgb(30, 255, 244);
+	background-color: rgb(30, 255, 116);
+	border-radius: 0.65em;
 }
 
 .message {
@@ -57,9 +57,9 @@ body {
 }
 
 li {
-	background-color: grey;
-	border: 0.1em solid;
-	border-radius: 0.25em;
+	background-color:rgb(255, 208, 0);
+	border: 0.3em black solid;
+	border-radius: 0.65em;
 	padding: 1em;
 	margin: 0.5em;
 	width: 7em;
@@ -67,6 +67,7 @@ li {
 	font-weight: bold;
 	float: left;
 	list-style: none;
+	/* object-fit: cover; */
 }
 
 .gp {
@@ -86,7 +87,7 @@ input[type='radio'] {
 	font-weight: bold;
   }
 .filter{
-	background-color: rgb(0, 255, 242);
+	background-color:rgb(30, 255, 116);
 	border-radius: 10px;
 	padding: 10px;
   }
@@ -100,6 +101,23 @@ input[type='radio'] {
   a{
 	  color: black;
   }
+
+  @media screen and (max-width: 480px) {
+	/* body {
+	  background-color: lightgreen;
+	} */
+	.box {
+		padding: 0.40em;
+		border-radius : 0.5em;
+		border : 1px solid #ddd;
+		height: 730px;
+		width: 300px;
+		margin-bottom: 1em;
+		margin-top: 20px;
+		padding-right: 10px;
+		/* background-image: url('/css/reg-bgimage.png');  */
+	  } 
+   }
   
 
 

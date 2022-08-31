@@ -1,0 +1,1 @@
+[![NodeJS CI with PostgreSQL](https://github.com/Zamoku/registration_numbers_webapp/actions/workflows/node.js.yml/badge.svg)](https://github.com/Zamoku/registration_numbers_webapp/actions/workflows/node.js.yml)

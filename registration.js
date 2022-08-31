@@ -12,7 +12,7 @@ module.exports = function registration(db){
         
         async function displayReg(){
             let results = await db.manyOrNone('SELECT Distinct registration_num FROM Registration');
-            
+            // console.log(results);
             return results
             // if display not true print error message
         }
@@ -34,6 +34,12 @@ module.exports = function registration(db){
             return results
         }
 
+        async function checkDuplicates(num){
+            // if( await !displayReg()){
+            //     return 
+            // }
+            
+        }
 
       
 
@@ -41,6 +47,7 @@ module.exports = function registration(db){
         addReg,
         displayReg,
         deleteReg,
-        filterReg
+        filterReg,
+        checkDuplicates
     }
 }
