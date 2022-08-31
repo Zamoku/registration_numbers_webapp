@@ -15,7 +15,7 @@ body {
     padding: 0.40em;
     border-radius : 0.5em;
     border : 1px solid #ddd;
-    height:600px;
+    height:700px;
 	width: 650px;
     margin-bottom: 1em;
     margin-top: 20px;
@@ -46,7 +46,7 @@ body {
 }
 
 .blue {
-	background-color: rgb(30, 255, 116);
+	background-color: rgb(30, 146, 255);
 	border-radius: 0.65em;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 li {
-	background-color:rgb(255, 208, 0);
+	background-color:rgb(196, 185, 164);
 	border: 0.3em black solid;
 	border-radius: 0.65em;
 	padding: 1em;
@@ -87,16 +87,16 @@ input[type='radio'] {
 	font-weight: bold;
   }
 .filter{
-	background-color:rgb(30, 255, 116);
+	background-color:rgb(30, 146, 255);
 	border-radius: 10px;
 	padding: 10px;
   }
 .reset{
-	background-color:rgb(0, 81, 255);
+	background-color:rgb(255, 136, 0);
 	border-radius: 10px;
 	width: 40px;
-	margin-top: 150px;
-	margin-left: auto;
+	margin-top: 260px;
+	margin-left: 490px;
   }
   a{
 	  color: black;
