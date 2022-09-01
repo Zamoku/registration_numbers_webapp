@@ -7,11 +7,12 @@ module.exports = function RegRoutes(reg){
         let regex =  /.[A-Z]\s{1}\d{3}([-/.])\d{3}/; 
         let regNo = req.body.setReg
          if (regNo == "" )  {
-            req.flash('info', "Please add registration number") 
+            req.flash('info',await reg.errorMsg()) 
          } 
         else if (!regex.test(regNo))  {
-            req.flash('info', "Please add registration number in a format of 'CA 123-456'") 
+            req.flash('info', await reg.errorMsg()) 
          } 
+
        
         res.redirect('/')
     }
@@ -20,15 +21,14 @@ module.exports = function RegRoutes(reg){
         res.render('index',{
 
             // reg_number: req.params.reg_number,
-            reg_number: await reg.displayReg()
+            reg_number: await reg.displayReg(),
+            error: await reg.errorMsg()
 
         })
-        if(!reg.displayReg()){
-            req.flash('info', "Sorry, you have already added the registration number") 
-        }
+       
     }
     async function deleteAll(req, res){
-        req.flash('success', 'You have deleted all registration numbers')
+        req.flash('success', await reg.errorMsg())
         await reg.deleteReg()
 
         res.redirect('/')

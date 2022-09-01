@@ -56,6 +56,10 @@ body {
 	color: crimson;
 	font-size:larger;
 }
+h3{
+	background-color: blanchedalmond;
+	width: auto;
+}
 
 li {
 	background-color:rgb(196, 185, 164);

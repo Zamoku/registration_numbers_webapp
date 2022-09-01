@@ -15,11 +15,11 @@
 		<div>
 			{{!-- <img src="/css/reg-bgimage.png" alt="" srcset=""> --}}
 			<h1>Registration numbers</h1>
-			<h3>Enter registration numbers in the following format: 'CA 123-456'</h3>
+			<h3>Enter registration numbers in the following format: <br> 'CA 123-45' <br> 'CY 125 256'</h3>
 			<div>
 			{{#if messages.info}}
                         <div class="entry">
-                            <p class="message" id="infoMessage"> {{messages.info}}</p>
+                            <p class="message" id="infoMessage"> {{error}}</p>
                           
                         </div>
                          <script type="text/javascript">window.setTimeout("document.getElementById('infoMessage').style.display='none';", 3000); </script>
@@ -34,7 +34,7 @@
 
 				{{#if messages.success}}
 				<div class="entry">
-					<p class="success_message" id="successMessage"> {{messages.success}}</p>
+					<p class="success_message" id="successMessage"> {{error}}</p>
 
 				</div>
 				<script
