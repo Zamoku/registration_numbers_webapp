@@ -5,7 +5,6 @@ body {
 	
 }
 
-
 .container {
 	width: 90%;
 	margin:	auto;
@@ -15,12 +14,13 @@ body {
     padding: 0.40em;
     border-radius : 0.5em;
     border : 1px solid #ddd;
-    height:750px;
+    height:870px;
 	width: 650px;
     margin-bottom: 1em;
     margin-top: 20px;
 	padding-right: 10px;
-	background-image: url('/css/reg-bgimage.png'); 
+	background-image: url('/css/reg-bgimage.png');
+	/* opacity: 0.7;  */
   }
 
 .parts {
@@ -50,15 +50,9 @@ body {
 	border-radius: 0.65em;
 }
 
-.message {
-	/* height: 1em; */
-	font-weight: bold;
-	color: crimson;
-	font-size:larger;
-}
 h3{
-	background-color: blanchedalmond;
-	width: auto;
+	background-color: white;
+	width: 470px;
 }
 
 li {
@@ -87,10 +81,20 @@ li {
 input[type='radio'] {
 	margin: 1em;
 }
-.success_message{
-	color:crimson ;
+
+.message {
 	font-weight: bold;
-	font-size: large;
+	color: white;
+	font-size:20px;
+	background-color: red;
+}
+
+.success_message{
+	font-weight: bold;
+	color:white ;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: red;
   }
 .filter{
 	background-color:rgb(114, 162, 207);
@@ -110,9 +114,7 @@ input[type='radio'] {
   }
 
   @media screen and (max-width: 480px) {
-	/* body {
-	  background-color: lightgreen;
-	} */
+
 	.box {
 		padding: 0.40em;
 		border-radius : 0.5em;

@@ -5,6 +5,7 @@ const flash = require('express-flash');
 const session = require('express-session');
 const Registration = require('./registration');
 const RegRoutes = require('./reg-route');
+const RegFunction = require('./reg-mesages')
 
 const pgPromise = require("pg-promise")
 const pgp = pgPromise({})
@@ -27,7 +28,8 @@ const db = pgp({
 });
 
 const registration = Registration(db)
-const registrationRoutes = RegRoutes(registration)
+const regFunction = RegFunction()
+const registrationRoutes = RegRoutes(registration, regFunction)
 
 const app = express();
 
@@ -38,6 +40,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(session({
     secret: "my greet secret",
+    cookie: {
+        maxAge: 1000 * 36000
+      },
     resave: false,
     saveUninitialized: true
 }));
@@ -50,10 +55,10 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
 app.post('/registr', registrationRoutes.addRegNum);
+app.get('/reset', registrationRoutes.deleteAll);
 app.get('/show', registrationRoutes.showReg);
 app.get('/', registrationRoutes.showReg);
 // app.get('/reg_number/:reg_number', registrationRoutes.showReg);
-app.get('/reset', registrationRoutes.deleteAll);
 app.post('/filter', registrationRoutes.filterReg);
 
 

@@ -15,11 +15,11 @@
 		<div>
 			{{!-- <img src="/css/reg-bgimage.png" alt="" srcset=""> --}}
 			<h1>Registration numbers</h1>
-			<h3>Enter registration numbers in the following format: <br> 'CA 123-45' <br> 'CY 125 256'</h3>
+			<h3>Enter registration numbers in the following format: <br> 'CA 123-45' <br> 'CY 125 256' <br> 'CAA 125256'</h3>
 			<div>
 			{{#if messages.info}}
                         <div class="entry">
-                            <p class="message" id="infoMessage"> {{error}}</p>
+                            <p class="message" id="infoMessage"> {{messages.info}}</p>
                           
                         </div>
                          <script type="text/javascript">window.setTimeout("document.getElementById('infoMessage').style.display='none';", 3000); </script>
@@ -34,7 +34,7 @@
 
 				{{#if messages.success}}
 				<div class="entry">
-					<p class="success_message" id="successMessage"> {{error}}</p>
+					<p class="success_message" id="successMessage"> {{messages.success}}</p>
 
 				</div>
 				<script
@@ -43,12 +43,12 @@
 			</div>
 <br>
 			<form action="/filter" method="POST">
-				<div class=""></a>
+
 					<strong>Filter by town</strong>
-					<input type="radio" name="town" value="">Show all
-					<input type="radio" name="town" value="CY">Bellville
-					<input type="radio" name="town" value="CJ">Paarl
-					<input type="radio" name="town" value="CA"> Cape Town
+					<input type="radio" name="town" value=""><i>Show all</i>  <br>
+					<input type="radio" name="town" value="CY">Bellville <br>
+					<input type="radio" name="town" value="CJ">Paarl <br>
+					<input type="radio" name="town" value="CA"> Cape Town <br>
 
 					<button class="filter btn" type="submit">Filter</button>
 			</form>
@@ -67,6 +67,15 @@
 
 			</div>
 		</div>
+
+		{{#if messages.error}}
+				<div class="entry">
+					<p class="success_message" id="errorMessage"> {{messages.error}}</p>
+
+				</div>
+				<script
+					type="text/javascript">window.setTimeout("document.getElementById('errorMessage').style.display='none';", 3000); </script>
+		{{/if}}
 	</div>
 
 		<div class="reset btn"><a href="/reset" name="reset">Reset</a></div>
